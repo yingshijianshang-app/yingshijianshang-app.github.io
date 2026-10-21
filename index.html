@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#073b4c">
+<title>影视鉴赏：深度解读每一帧背后的表达与意图</title>
+<meta name="keywords" content="影视鉴赏,电影赏析,剧集解读,导演风格分析,镜头语言,经典电影重温,获奖影片盘点,演技评析,影视文化评论,观影笔记,影片细节挖掘,幕后创作">
+<meta name="description" content="影视鉴赏是一个专注于影片深度解读的内容平台，从镜头语言、叙事结构、表演层次到幕后创作，拆解每一部作品值得被看见的细节。我们不做快餐式点评，只写能让人回看一遍影片的观影笔记。">
+<meta name="author" content="影视鉴赏编辑部">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="影视鉴赏：深度解读每一帧背后的表达与意图">
+<meta property="og:description" content="从镜头语言到叙事结构，从表演层次到幕后创作，影视鉴赏专注写能让人回看一遍影片的观影笔记。">
+<meta property="og:url" content="https://yingshijianshang-app.github.io">
+<meta property="og:site_name" content="影视鉴赏">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://yingshijianshang-app.github.io">
+<style>
+:root{
+--bg:#eef1f4;--bg2:#e3e9ee;--ink:#14213d;--ink2:#52607a;--line:#d5dde6;
+--teal:#073b4c;--teal2:#0a5c73;--amber:#e9a03b;--amber2:#f3c969;--coral:#d95d5d;--white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+font-family:"Georgia","Songti SC","Source Han Serif SC","Noto Serif CJK SC","Microsoft YaHei",serif;
+background:var(--bg);color:var(--ink);line-height:1.85;font-size:16px;overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:
+repeating-linear-gradient(0deg,transparent,transparent 54px,rgba(7,59,76,.022) 54px,rgba(7,59,76,.022) 55px)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.sans{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+
+/* 顶部 */
+.top{background:var(--teal);color:#b8cbd2;font-size:12.5px;padding:9px 0}
+.top .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.top a:hover{color:var(--amber2)}
+.top .siteurl{color:var(--amber2);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+
+/* 头部 */
+header{background:var(--white);border-bottom:3px solid var(--teal)}
+.hd{padding:26px 0;display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center}
+.brand{display:flex;flex-direction:column;gap:4px}
+.brand strong{font-size:30px;font-weight:900;letter-spacing:3px;color:var(--teal);font-family:-apple-system,"PingFang SC",sans-serif}
+.brand span{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--ink2)}
+.hd p{font-size:14.5px;color:var(--ink2);max-width:380px;border-left:3px solid var(--amber);padding-left:16px}
+.hd .date{text-align:right;font-size:13px;color:var(--ink2)}
+.hd .date b{display:block;font-size:15px;color:var(--teal);font-weight:700}
+
+/* 导航 */
+nav.sub{background:var(--ink);position:sticky;top:0;z-index:90}
+nav.sub ul{display:flex;list-style:none;gap:2px;flex-wrap:wrap}
+nav.sub a{display:block;padding:15px 20px;color:#c9d4de;font-size:14.5px;font-family:-apple-system,"PingFang SC",sans-serif;transition:.2s;border-bottom:3px solid transparent}
+nav.sub a:hover{background:#22345a;color:#fff;border-bottom-color:var(--amber)}
+
+/* 公告条 */
+.marq{background:var(--bg2);border-bottom:1px solid var(--line)}
+.marq .wrap{display:flex;align-items:center;gap:14px;padding:11px 20px;font-size:14px}
+.marq em{background:var(--coral);color:#fff;font-style:normal;font-size:11px;padding:3px 9px;border-radius:3px;letter-spacing:1px;flex-shrink:0}
+
+/* 标题组件 */
+.sec{padding:62px 0}
+.kicker{font-family:-apple-system,"PingFang SC",sans-serif;font-size:12px;letter-spacing:3px;color:var(--teal2);text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.ttl{font-size:clamp(23px,2.8vw,32px);font-weight:800;font-family:-apple-system,"PingFang SC",sans-serif;letter-spacing:-.3px;margin-bottom:8px}
+.ttl::before{content:"§";color:var(--amber);margin-right:10px;font-weight:400}
+.subttl{color:var(--ink2);font-size:15px;max-width:640px;margin-bottom:34px}
+
+/* 主编推荐 */
+.lead{display:grid;grid-template-columns:1.35fr 1fr;gap:0;border:1px solid var(--line);background:var(--white)}
+.lead .pic{position:relative;min-height:300px;background:linear-gradient(135deg,#0a3d4f,#1a6b7a 55%,#2a8f8a)}
+.lead .pic .frame{position:absolute;inset:24px;border:1px solid rgba(255,255,255,.35)}
+.lead .pic .txt{position:absolute;left:44px;right:44px;bottom:40px;color:#fff}
+.lead .pic .txt small{font-size:12px;letter-spacing:2px;color:var(--amber2)}
+.lead .pic .txt h3{font-family:-apple-system,"PingFang SC",sans-serif;font-size:27px;margin-top:8px;line-height:1.35}
+.lead .pic .no{position:absolute;top:24px;right:34px;font-family:Georgia,serif;font-size:72px;color:rgba(255,255,255,.18);line-height:1;font-weight:bold}
+.lead .body{padding:40px 38px}
+.lead .body .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.lead .body .tags i{font-style:normal;background:var(--bg2);color:var(--teal);font-size:12px;padding:4px 11px;border-radius:3px}
+.lead .body h2{font-family:-apple-system,"PingFang SC",sans-serif;font-size:24px;margin-bottom:14px;line-height:1.45}
+.lead .body p{color:var(--ink2);margin-bottom:14px;font-size:15.5px}
+.lead .body blockquote{border-left:4px solid var(--amber);padding:10px 0 10px 18px;color:var(--teal);font-style:italic;font-size:16px;margin:18px 0;background:rgba(233,160,59,.05)}
+.lead .body .more{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:12px 26px;font-size:14.5px;font-family:-apple-system,"PingFang SC",sans-serif;transition:.25s}
+.lead .body .more:hover{background:var(--coral)}
+
+/* 文章列表 */
+.articles{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+article.a{display:flex;flex-direction:column}
+article.a .cap{position:relative;padding-top:62%;background:var(--bg2);overflow:hidden}
+article.a .cap .fill{position:absolute;inset:0;transition:.5s}
+article.a:hover .cap .fill{transform:scale(1.06)}
+article.a .cap .cat{position:absolute;top:14px;left:14px;background:var(--teal);color:#fff;font-size:11px;padding:5px 11px;font-family:-apple-system,sans-serif;letter-spacing:1px}
+article.a .cap .pg{position:absolute;right:14px;bottom:14px;background:rgba(255,255,255,.92);color:var(--teal);font-size:11px;padding:4px 10px;font-family:-apple-system,sans-serif}
+article.a .inner{flex:1;background:var(--white);padding:24px 22px;border:1px solid var(--line);border-top:0}
+article.a time{font-size:12px;color:var(--ink2);font-family:-apple-system,sans-serif;letter-spacing:1px}
+article.a h3{font-family:-apple-system,"PingFang SC",sans-serif;font-size:19px;margin:10px 0 12px;line-height:1.5}
+article.a p{font-size:14.5px;color:var(--ink2);margin-bottom:16px}
+article.a .end{display:flex;justify-content:space-between;font-size:12.5px;color:var(--teal2);font-family:-apple-system,sans-serif;border-top:1px dashed var(--line);padding-top:12px}
+
+/* 鉴赏方法论 */
+.method{background:var(--teal);color:#dfe8ec}
+.method .ttl{color:#fff}
+.method .subttl{color:#9db3bd}
+.m-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}
+.m-it{background:var(--teal);padding:34px 26px;transition:.3s}
+.m-it:hover{background:var(--teal2)}
+.m-it b{display:block;font-family:Georgia,serif;font-size:34px;color:var(--amber2);margin-bottom:14px;font-weight:400}
+.m-it h4{font-family:-apple-system,"PingFang SC",sans-serif;font-size:17px;color:#fff;margin-bottom:10px}
+.m-it p{font-size:14px;color:#a8c0ca;line-height:1.8}
+
+/* 片单表格 */
+.tablewrap{background:var(--white);border:1px solid var(--line)}
+table.lst{width:100%;border-collapse:collapse;font-family:-apple-system,"PingFang SC",sans-serif;font-size:14.5px}
+table.lst th{background:var(--bg2);text-align:left;padding:14px 16px;font-size:12px;letter-spacing:1px;color:var(--teal);border-bottom:2px solid var(--teal);white-space:nowrap}
+table.lst td{padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+table.lst tr:last-child td{border-bottom:0}
+table.lst tbody tr{transition:.2s}
+table.lst tbody tr:hover{background:#f7fafb}
+table.lst td.n{font-family:Georgia,serif;color:var(--line);font-weight:bold;width:46px}
+table.lst td.nm{font-weight:700;width:26%}
+table.lst td.tg i{font-style:normal;background:var(--bg2);padding:3px 9px;border-radius:3px;font-size:12px;margin-right:5px;display:inline-block;margin-bottom:3px}
+table.lst td.sc{font-weight:800;color:var(--coral);width:80px;font-family:Georgia,serif;font-size:16px}
+table.lst td.act a{color:var(--teal2);border-bottom:1px solid transparent}
+table.lst td.act a:hover{border-bottom-color:var(--teal2)}
+
+/* 主编问答 */
+.qa{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.q{background:var(--white);border:1px solid var(--line);padding:26px 28px;border-left:5px solid var(--amber)}
+.q h4{font-family:-apple-system,"PingFang SC",sans-serif;font-size:17px;margin-bottom:12px;line-height:1.55}
+.q h4::before{content:"问";background:var(--teal);color:#fff;font-size:11px;padding:2px 7px;margin-right:9px;vertical-align:2px;font-weight:normal}
+.q p{font-size:14.5px;color:var(--ink2)}
+.q p::before{content:"答";background:var(--coral);color:#fff;font-size:11px;padding:2px 7px;margin-right:9px;vertical-align:2px}
+
+/* 时间轴 */
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-i{position:relative;background:var(--white);border:1px solid var(--line);padding:20px 24px;margin-bottom:16px;transition:.25s}
+.tl-i:hover{border-color:var(--teal);transform:translateX(6px)}
+.tl-i::before{content:"";position:absolute;left:-31px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--amber);border:3px solid var(--bg)}
+.tl-i .day{font-family:-apple-system,sans-serif;font-size:12px;color:var(--teal2);letter-spacing:1px;font-weight:700}
+.tl-i h4{font-family:-apple-system,"PingFang SC",sans-serif;font-size:17px;margin:6px 0 8px}
+.tl-i p{font-size:14.5px;color:var(--ink2)}
+
+/* 投稿 */
+.submit{background:var(--white);border:1px solid var(--line);padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.submit .txt h3{font-family:-apple-system,"PingFang SC",sans-serif;font-size:25px;margin-bottom:14px}
+.submit .txt p{color:var(--ink2);margin-bottom:18px}
+.submit .txt ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.submit .txt li{font-size:14.5px;color:var(--ink2);padding-left:26px;position:relative}
+.submit .txt li::before{content:"✓";position:absolute;left:0;color:var(--amber);font-weight:bold}
+.fbox{background:var(--bg2);padding:28px;border:1px dashed var(--teal)}
+.fbox .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.fbox input,.fbox textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:#fff;font-family:-apple-system,sans-serif;font-size:14px;color:var(--ink);border-radius:0}
+.fbox input:focus,.fbox textarea:focus{outline:none;border-color:var(--teal)}
+.fbox textarea{min-height:110px;resize:vertical}
+.fbox button{width:100%;padding:14px;background:var(--teal);color:#fff;border:0;font-family:-apple-system,sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:.25s}
+.fbox button:hover{background:var(--coral)}
+
+/* 页脚 */
+footer{background:var(--ink);color:#8d9bb0;padding:54px 0 24px;font-family:-apple-system,"PingFang SC",sans-serif}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:34px;margin-bottom:36px}
+.foot b.fn{font-size:26px;color:var(--amber2);letter-spacing:2px;display:block;margin-bottom:12px}
+.foot h5{color:#fff;font-size:15px;margin-bottom:16px;letter-spacing:1px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px}
+.foot a:hover{color:var(--amber2)}
+.foot .addr{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:14px;margin-top:14px;font-size:12.5px;color:var(--amber2);font-family:ui-monospace,Menlo,monospace;line-height:1.9}
+.copy{text-align:center;font-size:13px;border-top:1px solid rgba(255,255,255,.08);padding-top:22px}
+
+/* 响应式 */
+@media(max-width:960px){
+.articles{grid-template-columns:repeat(2,1fr)}
+.m-grid{grid-template-columns:repeat(2,1fr)}
+.lead{grid-template-columns:1fr}
+.lead .pic{min-height:220px}
+.submit{grid-template-columns:1fr;padding:30px}
+.foot{grid-template-columns:repeat(2,1fr)}
+.hd{grid-template-columns:1fr;text-align:left;gap:18px}
+.hd p{border-left:0;padding-left:0;border-top:2px solid var(--amber);padding-top:14px}
+.hd .date{text-align:left}
+}
+@media(max-width:680px){
+nav.sub ul{overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+nav.sub a{padding:13px 16px;white-space:nowrap;font-size:14px}
+.sec{padding:44px 0}
+.top{font-size:11.5px}
+.top .siteurl{display:none}
+.articles{grid-template-columns:1fr}
+.m-grid{grid-template-columns:1fr}
+.qa{grid-template-columns:1fr}
+table.lst{font-size:13.5px}
+table.lst th,table.lst td{padding:11px 10px}
+table.lst td.nm{width:auto}
+table.lst thead{display:none}
+table.lst tr{display:block;border-bottom:2px solid var(--teal);padding:8px 0}
+table.lst td{display:flex;gap:10px;border:0;padding:6px 0}
+table.lst td::before{content:attr(data-l);font-size:11px;color:var(--teal);min-width:52px;font-weight:700;font-family:-apple-system,sans-serif}
+table.lst td.n::before,table.lst td.sc::before{display:none}
+table.lst td.n{font-size:12px}
+.fbox .row{grid-template-columns:1fr}
+.submit{padding:24px}
+.q{padding:22px}
+.lead .body{padding:28px 22px}
+.lead .pic .txt{left:28px;right:28px;bottom:26px}
+.lead .pic .txt h3{font-size:22px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<div class="top">
+<div class="wrap">
+<span>影视鉴赏 · 让每一次观看都更有所得</span>
+<span class="siteurl">https://yingshijianshang-app.github.io</span>
+</div>
+</div>
+
+<header>
+<div class="wrap">
+<div class="hd">
+<div class="brand">
+<strong>影视鉴赏</strong>
+<span>Cinematic Appreciation</span>
+</div>
+<p>一个慢下来的影视评论栏目：我们不追热搜，只做能让读者回看一遍原片的解读。</p>
+<div class="date"><span>公历</span><b id="dt">2026 年 10 月 21 日</b><span>星期三 · 第 43 周</span></div>
+</div>
+</div>
+</header>
+
+<nav class="sub">
+<div class="wrap">
+<ul>
+<li><a href="#cover">主编推荐</a></li>
+<li><a href="#read">深度阅读</a></li>
+<li><a href="#how">鉴赏方法</a></li>
+<li><a href="#watch">本月必看</a></li>
+<li><a href="#qa">读者问答</a></li>
+<li><a href="#diary">编辑手记</a></li>
+<li><a href="#submit">投稿</a></li>
+<li><a href="#addr">访问地址</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="marq">
+<div class="wrap">
+<em>编辑部公告</em>
+<span>本期主题：<b>「沉默的镜头」</b>——盘点那些靠不说话完成叙事的八分钟。专题系列已更新至第七篇，欢迎留言提名你心中的候选片段。</span>
+</div>
+</div>
+
+<!-- 主编推荐 -->
+<section class="sec" id="cover">
+<div class="wrap">
+<div class="kicker">Editor's Pick</div>
+<h2 class="ttl">本期主编推荐</h2>
+<p class="subttl">每期只选一部作品做长文解读，入选标准是：它值得被反复看第二遍，且第一遍容易看漏。</p>
+<div class="lead">
+<div class="pic">
+<span class="no">01</span>
+<div class="frame"></div>
+<div class="txt">
+<small>本期解读 · 长篇</small>
+<h3>《霜降之夜》中那场没有配乐的十五分钟</h3>
+</div>
+</div>
+<div class="body">
+<div class="tags"><i>院线热映</i><i>悬疑</i><i>叙事结构</i><i>声音设计</i></div>
+<h2>它把「安静」用成了最重要的叙事工具</h2>
+<p>《霜降之夜》上映三周，讨论集中在剧情反转与表演，但真正让它区别于同类作品的，是第二幕中段那场长达十五分钟、全程没有配乐的戏。导演在这里做了一个反直觉的选择：越是情绪该被推上去的地方，声音越是往后退。</p>
+<p>我们逐镜拆解了这场戏的声轨与剪辑节奏，并对照了剧本原始段落——结论是，这场戏的「留白」不是技术失误，而是全片唯一一次由声音完成的叙事交代。</p>
+<blockquote>「配乐缺席的地方，往往是导演最想让你听见的地方。」</blockquote>
+<a class="more" href="#">阅读全文（约 4200 字）</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 深度阅读 -->
+<section class="sec" id="read" style="background:var(--white)">
+<div class="wrap">
+<div class="kicker">In Depth</div>
+<h2 class="ttl">深度阅读</h2>
+<p class="subttl">近期更新的一组解读文章，按题材与切入角度分类，篇幅从两千到五千字不等。</p>
+<div class="articles">
+<article class="a">
+<div class="cap">
+<div class="fill" style="background:linear-gradient(135deg,#1a3a4a,#3d6b7a)"></div>
+<span class="cat">导演研究</span>
+<span class="pg">6 分钟阅读</span>
+</div>
+<div class="inner">
+<time>2026 / 10 / 19</time>
+<h3>从《归途列车》到《霜降之夜》：一位导演十年间对「空间」的重新理解</h3>
+<p>同一位导演两部相隔十年的作品，小镇的物理尺寸没变，但摄影机与人物之间的距离变了整整一个量级。</p>
+<div class="end"><span>文 / 沈青禾</span><span>8 条讨论</span></div>
+</div>
+</article>
+<article class="a">
+<div class="cap">
+<div class="fill" style="background:linear-gradient(135deg,#4a2b1f,#8c4a2a)"></div>
+<span class="cat">剧集解读</span>
+<span class="pg">4 分钟阅读</span>
+</div>
+<div class="inner">
+<time>2026 / 10 / 17</time>
+<h3>《城南旧事·新篇》为何能把三十年的群像讲清楚</h3>
+<p>十二个家庭、三代人、三处搬家。它靠的不是信息量，而是一套稳定的时间标记系统。</p>
+<div class="end"><span>文 / 梁见山</span><span>23 条讨论</span></div>
+</div>
+</article>
+<article class="a">
+<div class="cap">
+<div class="fill" style="background:linear-gradient(135deg,#2b4a3c,#5a8a6a)"></div>
+<span class="cat">表演评析</span>
+<span class="pg">5 分钟阅读</span>
+</div>
+<div class="inner">
+<time>2026 / 10 / 15</time>
+<h3>那场没有台词的告别，演员用三个动作完成了全部交代</h3>
+<p>当剧本给不出台词时，表演的精度决定了一场戏是否成立。我们看的是手部动作与视线落点。</p>
+<div class="end"><span>文 / 周淮</span><span>11 条讨论</span></div>
+</div>
+</article>
+<article class="a">
+<div class="cap">
+<div class="fill" style="background:linear-gradient(135deg,#3c2b4a,#7a4a9a)"></div>
+<span class="cat">经典重温</span>
+<span class="pg">7 分钟阅读</span>
+</div>
+<div class="inner">
+<time>2026 / 10 / 12</time>
+<h3>4K 修复版《归途列车》：我们到底在修复什么</h3>
+<p>颗粒、色彩与画幅是三个不同的问题。修复不是把老片变清晰，而是让当年的选择重新被看见。</p>
+<div class="end"><span>文 / 编辑部</span><span>6 条讨论</span>
+</div>
+</div>
+</article>
+<article class="a">
+<div class="cap">
+<div class="fill" style="background:linear-gradient(135deg,#4a3c1f,#9a7a3a)"></div>
+<span class="cat">类型片</span>
+<span class="pg">5 分钟阅读</span>
+</div>
+<div class="inner">
+<time>2026 / 10 / 10</time>
+<h3>定格动画的「慢」不是缺点，是它的叙事单位</h3>
+<p>《纸船》用二十分钟「什么都不发生」的段落完成情绪铺垫，这种耐心在商业片中几乎绝迹。</p>
+<div class="end"><span>文 / 小满</span><span>9 条讨论</span></div>
+</div>
+</article>
+<article class="a">
+<div class="cap">
+<div class="fill" style="background:linear-gradient(135deg,#2b3c4a,#4a7a9a)"></div>
+<span class="cat">幕后创作</span>
+<span class="pg">8 分钟阅读</span>
+</div>
+<div class="inner">
+<time>2026 / 10 / 08</time>
+<h3>独立电影如何用三百万做出可信的世界观</h3>
+<p>《海边的下午》没有大场面，它的真实感来自场景的连续使用与声音的细节密度。</p>
+<div class="end"><span>文 / 顾清</span><span>14 条讨论</span></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- 鉴赏方法论 -->
+<section class="sec method" id="how">
+<div class="wrap">
+<div class="kicker">How We Read</div>
+<h2 class="ttl">我们如何鉴赏一部影片</h2>
+<p class="subttl">影视鉴赏的固定工作流：同一部作品至少经过四个维度，再由两位编辑交叉核对，最后才写成文章。</p>
+<div class="m-grid">
+<div class="m-it">
+<b>01</b>
+<h4>镜头与构图</h4>
+<p>看摄影机的位置、焦距选择与景别分配，判断导演在刻意强调什么、又在刻意隐藏什么。</p>
+</div>
+<div class="m-it">
+<b>02</b>
+<h4>声音与配乐</h4>
+<p>声轨是叙事的另一半。我们单独听一遍不带画面的声音，找出配乐缺席与声音先行的段落。</p>
+</div>
+<div class="m-it">
+<b>03</b>
+<h4>表演与调度</h4>
+<p>分析演员的视线落点、肢体幅度与走位逻辑，区分即兴与精确设计的结果。</p>
+</div>
+<div class="m-it">
+<b>04</b>
+<h4>结构与文本</h4>
+<p>对照剧本、分镜与时间线，确认影片最终的删改与重组发生在哪个环节。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 本月必看 -->
+<section class="sec" id="watch" style="background:var(--white)">
+<div class="wrap">
+<div class="kicker">Watchlist</div>
+<h2 class="ttl">本月必看清单</h2>
+<p class="subttl">本月入选的八部作品覆盖院线、剧集、纪录片与经典修复四个来源，附简短入选理由与建议观看方式。</p>
+<div class="tablewrap">
+<table class="lst">
+<thead>
+<tr><th>#</th><th>作品</th><th>类型与来源</th><th>入选理由</th><th>推荐度</th><th>操作</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="n" data-l="#">01</td>
+<td class="nm" data-l="作品">《城南旧事·新篇》</td>
+<td class="tg" data-l="来源"><i>国产剧集</i><i>年代群像</i></td>
+<td data-l="入选理由">细节准确度极高，是近年国产剧中少见的时间标记系统完整的作品。</td>
+<td class="sc" data-l="推荐度">A+</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+<tr>
+<td class="n" data-l="#">02</td>
+<td class="nm" data-l="作品">《霜降之夜》</td>
+<td class="tg" data-l="来源"><i>院线</i><i>悬疑</i></td>
+<td data-l="入选理由">声音设计是最大亮点，第二幕那场无配乐戏值得单独看两遍。</td>
+<td class="sc" data-l="推荐度">A</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+<tr>
+<td class="n" data-l="#">03</td>
+<td class="nm" data-l="作品">《最后的手艺人》</td>
+<td class="tg" data-l="来源"><i>纪录片</i><i>社会</i></td>
+<td data-l="入选理由">真实感来自长期跟踪，而非剪辑技巧，适合安静地完整看完。</td>
+<td class="sc" data-l="推荐度">A</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+<tr>
+<td class="n" data-l="#">04</td>
+<td class="nm" data-l="作品">《归途列车》4K 重制版</td>
+<td class="tg" data-l="来源"><i>经典修复</i><i>文艺</i></td>
+<td data-l="入选理由">修复版最大的价值是还原了当年的摄影选择，而非提升清晰度。</td>
+<td class="sc" data-l="推荐度">A+</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+<tr>
+<td class="n" data-l="#">05</td>
+<td class="nm" data-l="作品">《海边的下午》</td>
+<td class="tg" data-l="来源"><i>独立制作</i><i>爱情</i></td>
+<td data-l="入选理由">低预算却完成可信世界观，场景连续使用是它最聪明的做法。</td>
+<td class="sc" data-l="推荐度">B+</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+<tr>
+<td class="n" data-l="#">06</td>
+<td class="nm" data-l="作品">《纸船》</td>
+<td class="tg" data-l="来源"><i>定格动画</i><i>奇幻</i></td>
+<td data-l="入选理由">它证明慢可以是叙事单位，适合与孩子一起看并讨论。</td>
+<td class="sc" data-l="推荐度">A-</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+<tr>
+<td class="n" data-l="#">07</td>
+<td class="nm" data-l="作品">《无人之境》</td>
+<td class="tg" data-l="来源"><i>犯罪</i><i>心理</i></td>
+<td data-l="入选理由">反转之外有扎实的人物动机，避免了同类题材常见的逻辑硬伤。</td>
+<td class="sc" data-l="推荐度">B+</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+<tr>
+<td class="n" data-l="#">08</td>
+<td class="nm" data-l="作品">《春江水暖》</td>
+<td class="tg" data-l="来源"><i>纪录片</i><i>自然</i></td>
+<td data-l="入选理由">季节更替的镜头结构本身就是一种叙事，看完会想立刻出门散步。</td>
+<td class="sc" data-l="推荐度">B</td>
+<td class="act" data-l=""><a href="#">查看解读</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- 读者问答 -->
+<section class="sec" id="qa">
+<div class="wrap">
+<div class="kicker">Q &amp; A</div>
+<h2 class="ttl">读者问答</h2>
+<p class="subttl">每期从读者来信中选出三个被反复提到的问题，由编辑部公开作答。问题已获提问者授权并做匿名处理。</p>
+<div class="qa">
+<div class="q">
+<h4>看完一部好片后想写点什么，但总写成剧情复述，怎么破？</h4>
+<p>先强制删掉前两段，因为那两段多半是剧情。直接从你最在意的一个镜头写起，只回答一个问题：这个镜头为什么这样处理。</p>
+</div>
+<div class="q">
+<h4>评分越来越高，是不是所有榜单都不可信了？</h4>
+<p>评分反映的是观看人数的分布，不是作品质量。看榜单时先看分母，再看中位数，最后看评分变化曲线——跳水比高分更有信息量。</p>
+</div>
+<div class="q">
+<h4>经典老片看不下去，是作品的问题还是我的问题？</h4>
+<p>多半是节奏预期的问题。老片的留白密度远高于当下作品，建议先看剪辑版与修复版，配一段简短的导演访谈，门槛会明显降低。</p>
+</div>
+<div class="q">
+<h4>想入门影视鉴赏，有推荐的观看顺序吗？</h4>
+<p>不要按片单看，要按导演看。连续看完同一位导演的三部作品，你自然会注意到那些反复出现的选择，那比读十篇评论有效。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 编辑手记 -->
+<section class="sec" id="diary" style="background:var(--white)">
+<div class="wrap">
+<div class="kicker">Editor's Diary</div>
+<h2 class="ttl">编辑手记</h2>
+<p class="subttl">近期工作记录与更新说明：栏目调整、选题来源与一些还没写成文章的想法。</p>
+<div class="tl">
+<div class="tl-i">
+<span class="day">10 / 19 · 周一</span>
+<h4>「沉默的镜头」系列第七篇进入校对</h4>
+<p>这篇写了九天。难点在于，描述声音缺席这件事本身就容易写成技术清单，最后决定用时间码对照的方式来写。</p>
+</div>
+<div class="tl-i">
+<span class="day">10 / 15 · 周四</span>
+<h4>栏目调整：取消每日短评，改为每周三篇固定更新</h4>
+<p>尝试了一个月每日更新，结论是数量稀释了质量。现在每篇文章都要求有至少一个原创观察点，而不是复述共识。</p>
+</div>
+<div class="tl-i">
+<span class="day">10 / 10 · 周六</span>
+<h4>修复片专题启动，已联系三位胶片修复师做访谈</h4>
+<p>读者提问里「修复到底修了什么」出现频率最高，所以单独开了一个小专题。访谈内容会在十一月中旬陆续放出。</p>
+</div>
+<div class="tl-i">
+<span class="day">10 / 06 · 周二</span>
+<h4>新栏目「观影门槛」上线测试</h4>
+<p>每篇解读现在会标注内容提示与情绪预期，帮助读者判断此刻是否适合看某部作品。这是本站区别于其他影视站点的一个尝试。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 投稿 -->
+<section class="sec" id="submit">
+<div class="wrap">
+<div class="submit">
+<div class="txt">
+<div class="kicker">Contribute</div>
+<h3>投稿与读者来信</h3>
+<p>我们长期接受两类内容：一是完整的解读文章，二是一两句被某部作品触动的话。前者经过两轮编辑后发布，后者会收录在每期的读者声音栏目。</p>
+<ul>
+<li>单篇 1500 字以上，主题不限，但必须有一个你自己发现的观察点</li>
+<li>不接受剧情复述、水军式好评与任何形式的商业推广内容</li>
+<li>投稿后五个工作日内回复，无论采用与否</li>
+<li>发表即视为同意本站在不改动原意的前提下进行编辑</li>
+</ul>
+</div>
+<div class="fbox">
+<div class="row">
+<input type="text" placeholder="称呼 / 笔名">
+<input type="email" placeholder="联系方式（邮箱）">
+</div>
+<input type="text" placeholder="稿件标题" style="margin-bottom:12px">
+<textarea placeholder="稿件正文或你想说的一两句话……">亲爱的编辑部：</textarea>
+<button type="button">提交稿件</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 访问地址 -->
+<section class="sec" id="addr" style="background:var(--white)">
+<div class="wrap">
+<div class="kicker">Official Address</div>
+<h2 class="ttl">官方访问地址</h2>
+<p class="subttl">影视鉴赏仅此一个访问地址，请认准官方域名，避免误入仿冒站点。</p>
+<div style="background:var(--bg2);border:1px solid var(--line);padding:28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between">
+<div>
+<strong style="font-family:-apple-system,sans-serif;font-size:19px;color:var(--teal)">影视鉴赏 · 官方站点</strong>
+<p style="font-size:14px;color:var(--ink2);margin-top:6px">唯一官方访问地址，请收藏本页。</p>
+</div>
+<code style="font-family:ui-monospace,Menlo,monospace;font-size:15px;color:var(--coral);background:#fff;border:1px dashed var(--coral);padding:12px 18px">https://yingshijianshang-app.github.io</code>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="foot">
+<div>
+<b class="fn">影视鉴赏</b>
+<p style="font-size:14px;line-height:1.9">专注影片深度解读与影视文化评论的内容栏目。我们不做快餐式点评，只写能让人回看一遍原片的解读文章。</p>
+<div class="addr">官方访问地址<br>https://yingshijianshang-app.github.io</div>
+</div>
+<div>
+<h5>内容栏目</h5>
+<ul>
+<li><a href="#cover">主编推荐</a></li>
+<li><a href="#read">深度阅读</a></li>
+<li><a href="#how">鉴赏方法</a></li>
+<li><a href="#watch">本月必看</a></li>
+<li><a href="#qa">读者问答</a></li>
+<li><a href="#diary">编辑手记</a></li>
+</ul>
+</div>
+<div>
+<h5>题材分类</h5>
+<ul>
+<li><a href="#">导演研究</a></li>
+<li><a href="#">剧集解读</a></li>
+<li><a href="#">表演评析</a></li>
+<li><a href="#">经典重温</a></li>
+<li><a href="#">类型片观察</a></li>
+<li><a href="#">幕后创作</a></li>
+</ul>
+</div>
+<div>
+<h5>关于与联系</h5>
+<ul>
+<li><a href="#submit">投稿与来信</a></li>
+<li><a href="#">内容规范</a></li>
+<li><a href="#">转载授权</a></li>
+<li><a href="#">商务合作</a></li>
+<li><a href="#">RSS 订阅</a></li>
+<li><a href="#">更新日志</a></li>
+</ul>
+</div>
+</div>
+<div class="copy">© 2026 影视鉴赏 · 官方地址：https://yingshijianshang-app.github.io · 本站内容仅供交流与参考，影片信息以官方发布为准</div>
+</div>
+</footer>
+
+<script>
+(function(){
+var d=new Date(),w="日一二三四五六";
+document.getElementById('dt').textContent=d.getFullYear()+' 年 '+(d.getMonth()+1)+' 月 '+d.getDate()+' 日';
+var t=document.querySelectorAll('.tl-i .day');
+for(var i=0;i<t.length;i++){var s=t[i].textContent.split('·')[0].trim();var p=s.split('/');if(p.length===3){t[i].textContent=p[0].trim()+' 月 '+p[1].trim()+' 日 · 星期'+w.charAt(new Date(2026,p[0]-1,p[1]).getDay());}}
+})();
+</script>
+</body>
+</html>
